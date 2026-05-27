@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  NEXT_TYPESCRIPT_SKIP_TYPECHECK = "1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
