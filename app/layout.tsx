@@ -2,13 +2,14 @@ import './globals.css'
 import { Toaster } from 'react-hot-toast'
 import { AuthProvider } from './context/AuthContext'
 import { CurrencyProvider } from './components/CurrencySelector'
+import { ReactNode } from 'react'
 
 export const metadata = {
   title: 'Staffly — Tu biblioteca musical digital',
   description: 'Descubre, escucha y descarga partituras de alta calidad.',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
       <body>
