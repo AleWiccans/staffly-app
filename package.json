@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/cli": "^8.3.4",
+    "@capacitor/core": "^8.3.4",
     "@tiptap/extension-bullet-list": "^3.23.6",
     "@tiptap/extension-color": "^3.23.6",
     "@tiptap/extension-list-item": "^3.23.6",
