@@ -9,10 +9,6 @@ import { ArrowLeft, Upload, X, Music, FileText, Headphones, Image } from 'lucide
 import toast from 'react-hot-toast'
 import RichTextEditor from '../../../components/RichTextEditor'
 
-export function generateStaticParams() {
-  return []
-}
-
 const FORMATS = [
   'Orquesta Sinfónica', 'Banda Sinfónica', 'Big Band',
   'Orquesta de Cámara', 'Orquesta de Cuerdas', 'Piano Solo',

@@ -9,9 +9,7 @@ import { ArrowLeft, Heart, Bookmark, BookmarkCheck, ShoppingCart, Star, Play, Pa
 import toast from 'react-hot-toast'
 import OrchestraMap from '../../components/OrchestraMap'
 
-export function generateStaticParams() {
-  return []
-}
+export const dynamic = 'force-static'
 
 export default function ScorePage() {
   const { id } = useParams()
@@ -139,7 +137,6 @@ export default function ScorePage() {
 
   return (
     <main style={{ minHeight: '100vh', maxWidth: '1100px', margin: '0 auto', padding: '2rem 1.5rem' }}>
-
       {modalPage !== null && (
         <div onClick={() => setModalPage(null)} style={{
           position: 'fixed', inset: 0, zIndex: 1000,
@@ -267,19 +264,9 @@ export default function ScorePage() {
           </div>
 
           {score.description && (
-            <div
-              dangerouslySetInnerHTML={{ __html: score.description }}
-              style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '520px' }}
-            />
+            <div dangerouslySetInnerHTML={{ __html: score.description }}
+              style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '520px' }} />
           )}
-
-          <style>{`
-            .ProseMirror h2, h2 { font-size: 1.1rem; font-weight: 700; margin: 0.75rem 0 0.4rem; color: rgba(240,237,230,0.95); }
-            .ProseMirror h3, h3 { font-size: 0.95rem; font-weight: 600; margin: 0.6rem 0 0.3rem; }
-            .ProseMirror p { margin: 0 0 0.5rem; }
-            .ProseMirror ul, ul { padding-left: 1.25rem; margin: 0.4rem 0; }
-            .ProseMirror li, li { margin-bottom: 0.2rem; }
-          `}</style>
 
           {score.tags?.length > 0 && (
             <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
