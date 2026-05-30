@@ -9,10 +9,6 @@ import { ArrowLeft, Upload, X, Music, FileText, Headphones, Image } from 'lucide
 import toast from 'react-hot-toast'
 import RichTextEditor from '../../../components/RichTextEditor'
 
-export function generateStaticParams() {
-  return []
-}
-
 const FORMATS = [
   'Orquesta Sinfónica', 'Banda Sinfónica', 'Big Band',
   'Orquesta de Cámara', 'Orquesta de Cuerdas', 'Piano Solo',
@@ -52,7 +48,7 @@ const isDrumKitPart = (name) => {
   return DRUM_KIT_PARTS.some(p => n.includes(p))
 }
 
-export default function EditPage() {
+export default function EditPageClient() {
   const { id } = useParams()
   const { isAdmin } = useAuth()
   const [loading, setLoading] = useState(true)
